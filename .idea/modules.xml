@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bacen/bacen.iml" filepath="$PROJECT_DIR$/bacen/bacen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bacen-bootcamp-matera.iml" filepath="$PROJECT_DIR$/.idea/bacen-bootcamp-matera.iml" />
+    </modules>
+  </component>
+</project>
