@@ -1,6 +1,7 @@
 package bacen.com.br.bacen.controller;
 
 import bacen.com.br.bacen.dto.Account;
+import bacen.com.br.bacen.dto.ActiveRequest;
 import bacen.com.br.bacen.service.AccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,11 @@ public class AccountController {
         return ResponseEntity.ok(accountCreated);
     }
 
+    @PatchMapping("/{id}")
+    public ResponseEntity<Account> updatedAccount(@PathVariable Long id, @RequestBody ActiveRequest account) {
+        return service.updateActiveStatus(id, account);
+    }
+
     @GetMapping("/{cpf}")
     public ResponseEntity<Account> getAccount(@PathVariable String cpf) {
         Account account = cacheAccount.get(cpf);
@@ -38,5 +44,6 @@ public class AccountController {
         log.info("A Conta com chavePix {} encontrada no cache.", cpf);
         return ResponseEntity.ok(account);
     }
+
 }
 

@@ -7,5 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AccountRepository extends JpaRepository<Account, Long> {
 
-        Account findByCpf (String cpf);
+    Account findByCpf(String cpf);
+
+    Account save(Account account);
 }

@@ -24,4 +24,6 @@ public class Account {
     private String cpf;
     @Column(name = "SALDO")
     private BigDecimal balance = BigDecimal.ZERO;
+    @Column(name = "ATIVO")
+    private Boolean active = Boolean.TRUE;
 }
